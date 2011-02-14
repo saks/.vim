@@ -10,3 +10,6 @@
 [submodule "bundle/snipmate-jspec"]
 	path = bundle/snipmate-jspec
 	url = git://github.com/tobiassvn/snipmate-jspec.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
