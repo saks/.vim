@@ -4,3 +4,9 @@
 [submodule "bundle/vim-textobj-rubyblock"]
 	path = bundle/vim-textobj-rubyblock
 	url = git://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = git://git.wincent.com/command-t.git
+[submodule "bundle/snipmate-jspec"]
+	path = bundle/snipmate-jspec
+	url = git://github.com/tobiassvn/snipmate-jspec.git
