@@ -108,6 +108,7 @@ highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
 set hlsearch
+map <M-k> :nohl <cr>
 set cursorline
 set guifont=Monaco\ 10
 
