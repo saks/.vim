@@ -11,7 +11,7 @@ hi link javaScriptReserved Error
 " mernik.js specific highlighting groups
 "
 syn keyword javaScriptMernikJS_proto                $proto $class
-syn keyword javaScriptMernikJS_special_methods      init_ initContent_ startObservers_ notify subscribe pluralize singularize ordinalize constantize capitalize get set classEval include defineError defineIndex field attrAccessible isAttrAccessible belongsTo hasMany actsAsSynchronizable where
+syn keyword javaScriptMernikJS_special_methods      init_ initContent_ startObservers_ notify startWith endWith subscribe unsubscribe pluralize singularize ordinalize constantize capitalize get set classEval include defineError defineIndex field attrAccessible isAttrAccessible belongsTo hasMany actsAsSynchronizable where
 syn keyword javaScriptMernikJS_core_classes         Class Subscribable ContentWidgets
 syn keyword javaScriptMernikJS_core_objects         BUS mernikNamespace globalNamespace ORM Storage
 syn keyword javaScriptMernikJS_builtint_functions   inherits extend parseInt10 parseInt10FromStripped trimSpaces strip arrayMin arrayMax typeOf emptyFunction returnsTrueFunction returnsFalseFunction isDef isDefAndNotNull isObject isNull isFunction isNumber isString copyArray copyObject deepCopy asyncEach objectValues objectSize foreignKeyNameToCollectionName collectionNameToForeignKeyName f log foreignKeyNameToType objectHash $S parseBannerFormat fixBannerFormat
