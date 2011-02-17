@@ -116,6 +116,14 @@ set cursorline
 set guifont=Monaco\ 10
 
 
+" Thorfile, Rakefile and Gemfile are Ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru} set ft=ruby
+
+
+" md, markdown, and mk are markdown and define buffer-local preview
+au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} map <buffer> <Leader>p :Mm <CR>
+
+
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
   " Enable file type detection
