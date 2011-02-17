@@ -38,16 +38,14 @@ set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces
 set bs=2  " Backspace over everything in insert mode
+set noexpandtab
 set shiftwidth=2  " Tabs under smart indent
-set nocp incsearch
 set cinoptions=:0,p0,t0
 set cinwords=if,else,while,do,for,switch,case
 set formatoptions=tcqr
 set cindent
 set autoindent
 set smarttab
-
-set noexpandtab
 
 " Visual
 set showmatch  " Show matching brackets.
@@ -101,11 +99,18 @@ nmap <leader>l :set list!<CR>
 colorscheme railscasts
 
 
+
 "Invisible character colors
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
+" Searching
 set hlsearch
+set nocp incsearch
+set ignorecase
+set smartcase
+
+
 map <M-k> :nohl <cr>
 set cursorline
 set guifont=Monaco\ 10
