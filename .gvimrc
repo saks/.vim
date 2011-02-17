@@ -12,10 +12,8 @@ exe 'inoremap <script> <S-Insert>' paste#paste_cmd['i']
 
 
 " setup persisent undo
-if has("undofile")
-	set undofile
-	set undodir=/tmp
-endif
+set undofile
+set undodir=/tmp
 
 filetype on  " Automatically detect file types.
 set nocompatible  " We don't want vi compatibility.
