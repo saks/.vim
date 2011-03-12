@@ -35,18 +35,6 @@ set nu  " Line numbers on
 set wrap  " Line wrapping on
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
 
-" Formatting (some of these are for coding in C and C++)
-set ts=2  " Tabs are 2 spaces
-set bs=2  " Backspace over everything in insert mode
-set noexpandtab
-set shiftwidth=2  " Tabs under smart indent
-set cinoptions=:0,p0,t0
-set cinwords=if,else,while,do,for,switch,case
-set formatoptions=tcqr
-set cindent
-set autoindent
-set smarttab
-
 " Visual
 set showmatch  " Show matching brackets.
 set mat=5  " Bracket blinking.
@@ -82,8 +70,8 @@ if has("autocmd")
     \ endif
 endif
 if &t_Co > 2 || has("gui_running")
-  " Enable syntax highlighting
-  syntax on
+	" Enable syntax highlighting
+	syntax on
 endif
 
 
@@ -116,32 +104,40 @@ set cursorline
 set guifont=Monaco\ 10
 
 
-" Thorfile, Rakefile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru} set ft=ruby
 
-
-" md, markdown, and mk are markdown and define buffer-local preview
-au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} map <buffer> <Leader>p :Mm <CR>
 
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
-  " Enable file type detection
-  filetype on
+	" Enable file type detection
+	filetype on
 
-  " Syntax of these languages is fussy over tabs Vs spaces
-  autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
-  autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+	" Syntax of these languages is fussy over tabs Vs spaces
+	autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+	autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
-  " Customisations based on house-style (arbitrary)
-  autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+	" Customisations based on house-style (arbitrary)
+	autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
 
-  " Treat .thor files as Ruby
-  autocmd BufNewFile,BufRead *.thor setfiletype ruby
+	" Treat .thor files as Ruby
+	autocmd BufNewFile,BufRead *.thor setfiletype ruby
 
-  " Treat .rss files as XML
-  autocmd BufNewFile,BufRead *.rss setfiletype xml
+	" Thorfile, Rakefile and Gemfile are Ruby
+	au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru} set ft=ruby
+
+	" md, markdown, and mk are markdown and define buffer-local preview
+	au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} map <buffer> <Leader>p :Mm <CR>
+
+	" Treat .rss files as XML
+	autocmd BufNewFile,BufRead *.rss setfiletype xml
+
+	autocmd FileType ruby setlocal ts=2 sts=2 sw=2 noexpandtab
+	autocmd FileType javascript setlocal ts=2 sts=2 sw=2 noexpandtab
+
+	" set filetype for json file to javascript
+	autocmd BufNewFile,BufRead *.json setfiletype javascript
 endif
 
 
@@ -203,3 +199,15 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " right margin ruller
 set colorcolumn=80
+
+" Formatting (some of these are for coding in C and C++)
+set ts=2  " Tabs are 2 spaces
+set bs=2  " Backspace over everything in insert mode
+set shiftwidth=2  " Tabs under smart indent
+set cinoptions=:0,p0,t0
+set cinwords=if,else,while,do,for,switch,case
+set formatoptions=tcqr
+set cindent
+set autoindent
+set smarttab
+set noexpandtab
