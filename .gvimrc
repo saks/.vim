@@ -167,7 +167,7 @@ map <M-,> :bp<CR>
 nmap <silent> <M-o> :CommandT<CR>
 
 " ignore folllowing files
-set wildignore+=*.bak,*~,*.tmp,*.backup,*swp,*.o,*.obj,.git,*.rbc
+set wildignore+=*.bak,*~,*.tmp,*.backup,*swp,*.o,*.obj,.git,*.rbc,*.png,*.xpi
 
 
 " save file on Contrl-S
