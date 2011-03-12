@@ -16,9 +16,6 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
-[submodule "bundle/rails"]
-	path = bundle/rails
-	url = git://github.com/tpope/vim-rails.git
 [submodule "bundle/minibufexpl"]
 	path = bundle/minibufexpl
 	url = git://github.com/fholgado/minibufexpl.vim.git
