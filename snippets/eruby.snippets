@@ -12,3 +12,20 @@ snippet lt
 	<%= link_to ${1}, ${2} %>
 # end tag
 	<% end %>
+# before filter
+	before_filter :${1:method_name}
+# if statement
+snippet if
+	<% if ${1} %>
+		${2}
+	<% end %>
+# if else
+snippet ife
+	<% if ${1} %>
+		${2}
+	<% else %>
+		${3}
+	<% end %>
+# end tag
+snippet end
+	<% end %>
