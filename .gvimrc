@@ -127,6 +127,9 @@ if has("autocmd")
 	" Thorfile, Rakefile and Gemfile are Ruby
 	au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru} set ft=ruby
 
+
+	autocmd BufNewFile,BufRead *.scss setfiletype css
+
 	" Treat .rss files as XML
 	autocmd BufNewFile,BufRead *.rss setfiletype xml
 
