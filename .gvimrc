@@ -56,6 +56,23 @@ au BufWinLeave ?* mkview
 au BufWinEnter ?* silent loadview
 
 
+" UI Tweaks
+" ----------------------------------------------------------------------------
+" make search results appear in the middle of the screen
+nmap n nzz
+nmap N Nzz
+nmap * *zz
+nmap # #zz
+nmap g* g*zz
+nmap g# g#zz
+
+" Switch to previous/next buffer
+nmap <kMinus> :bprevious<CR>
+nmap <kPlus> :bnext<CR>
+
+" CTRL+S saves the buffer
+nmap <C-s> :w<CR>
+
 
 " handle the irb + vim
 
@@ -133,8 +150,8 @@ if has("autocmd")
 	" Treat .rss files as XML
 	autocmd BufNewFile,BufRead *.rss setfiletype xml
 
-	autocmd FileType ruby setlocal ts=2 sts=2 sw=2 noexpandtab
-	autocmd FileType javascript setlocal ts=2 sts=2 sw=2 noexpandtab
+	autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
 
 	" set filetype for json file to javascript
 	autocmd BufNewFile,BufRead *.json setfiletype javascript
@@ -166,10 +183,6 @@ nmap <silent> <M-o> :CommandT<CR>
 set wildignore+=*.bak,*~,*.tmp,*.backup,*swp,*.o,*.obj,.git,*.rbc,*.png,*.xpi
 
 
-" save file on Contrl-S
-nmap <C-s> :w<CR>
-
-
 " Text movimg with plugin unimpaired.vim
 " Bubble single lines
 
@@ -198,7 +211,7 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 
 " right margin ruller
-set colorcolumn=80
+set colorcolumn=100
 
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces
@@ -210,4 +223,4 @@ set formatoptions=tcqr
 set cindent
 set autoindent
 set smarttab
-set noexpandtab
+set expandtab
